@@ -1,7 +1,9 @@
 package com.example.firsttest.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -9,6 +11,8 @@ import java.io.Serializable;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class SalaryRequest implements Serializable {
 
     @Min(value = 1 , message = "Hours can't be less than 1")

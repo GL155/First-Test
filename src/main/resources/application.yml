@@ -1,2 +1,5 @@
 server:
+  error:
+    include-exception: true
+    include-binding-errors: always
   port: 8083
