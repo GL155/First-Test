@@ -1,5 +1,8 @@
 package com.example.firsttest.service;
 
+import com.example.firsttest.model.SalaryRequest;
+import com.example.firsttest.model.SalaryResponse;
+
 public class FirstService {
 
     public String firstMethod() {
@@ -14,5 +17,12 @@ public class FirstService {
                 "\n" +
                 "</body>\n" +
                 "</html>";
+    }
+
+    public SalaryResponse calculateSalary(SalaryRequest salaryRequest) {
+        return SalaryResponse.builder()
+                .dayMaxSalary(salaryRequest.getRate() * 8)
+                .totalSalary(salaryRequest.getHours() * salaryRequest.getRate())
+                .build();
     }
 }
